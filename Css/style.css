@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0B3948;
+    color: #ACB0BD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ACB0BD;
+    font-family: nunito, sans-serif;
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid azure;
+    border-radius: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .main {
+        max-width: 1524px;
+        margin: 1rem auto;
+        width: 100vh;
+       
+    }
+    
+}

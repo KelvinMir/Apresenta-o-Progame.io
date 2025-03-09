@@ -1,0 +1,169 @@
+.header {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+.main {
+    padding: 1rem;
+}
+.header .title {
+    align-items: center;
+    font-family: 'open sans', 'sans-serif';
+}
+.header img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.header a {
+    text-decoration: none;
+    color: rgb(29, 13, 104);
+}
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    
+}
+.information p {
+    margin: .5rem 0.5rem .5rem 3rem;
+    font-size: 1.5rem;
+}
+.information a {
+    margin: .5rem 0.5rem .5rem 3rem;
+    font-size: 1.5rem;
+    color: #ACB0BD;
+    
+}
+.information a::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;;
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+
+.information .contact {
+    display: flex;
+    align-items: center;
+}
+.information .contact a {
+    color: rgb(233, 229, 221); 
+}
+.information .contact a:hover{
+    text-decoration: underline;
+}
+
+.information .contact::before {
+    content: '';
+    align-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-repeat: no-repeat;
+    background-image: url('../img/email.png');
+    background-size: contain;
+    background-position: center;
+} 
+.information .people {
+    display: flex;
+    align-items: center;
+}
+.information .people::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-image: url('../img/people.png');
+    background-size: contain;
+    background-position: center;
+}
+.information .wpp {
+    display: flex;
+    align-items: center;
+}
+.information .wpp a {
+    color: rgb(233, 229, 221);
+}
+.information .wpp a:hover {
+    text-decoration: underline;
+}
+.information .wpp::before {
+    content: '';
+    align-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-repeat: no-repeat;
+    background-image: url('../img/wpp.svg');
+    background-size: contain;
+    background-position: center;
+}
+ .information .group {
+    display: flex;
+    align-items: center;
+ }
+.information .group a {
+    color: rgb(233, 229, 221);
+} 
+.information .group a:hover {
+    text-decoration: underline;
+}
+.information .group::before {
+    content: '';
+    align-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-repeat: no-repeat;
+    background-image: url('../img/linkedin.svg');
+    background-size: contain;
+    background-position: center;
+}
+.information .github {
+    display: flex;
+    align-items: center;
+}
+.information .github a {
+    color: rgb(233, 229, 221);
+}
+
+.information .github a:hover {
+    text-decoration: underline;
+}
+
+.information .github::before {
+    content: '';
+    align-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-repeat: no-repeat;
+    background-image: url('../img/github.svg');
+    background-size: contain;
+    background-position: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas:
+         "photo title"
+         "photo information";
+         gap: 1rem;
+        
+    }
+    .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    .header .title {
+        grid-area: title;
+        text-align: start;
+    }
+    .header .information {
+        grid-area: information;
+    }
+    .information a, .information p {
+        margin: .5rem 0;
+    }
+}

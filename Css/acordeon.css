@@ -1,0 +1,90 @@
+
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border: 1px solid white;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    transition: .25s;
+}
+.acordeon.open,
+.acordeon:hover {
+    background-color:#416165;
+    border-color: #D0CDD7;
+}
+.acordeon .content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: .25s opacity ease-in-out;
+    max-width: 100%;
+    
+    
+    
+}
+.acordeon .trigger {
+    font-size: 1.45rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 2rem;
+    background-color: transparent;
+    color: #ACB0BD;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+.acordeon .trigger::hover {
+    cursor: pointer;
+}
+
+.acordeon .trigger::after {
+    content: '';
+    display:inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    background-image: url('../img/icons/set.svg');
+    background-repeat: no-repeat;
+    transition: .30s;
+
+}
+.acordeon.open .trigger::after {
+    transform: rotate(180deg);
+}
+
+.acordeon.open .content {
+    display: block;
+    height: auto;
+    opacity: 1;
+    padding: 0 1rem 1rem 2rem;
+}
+ .tabela, .labace {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: #ACB0BD;
+}
+.tabela-tec, .labace-tec {
+    padding: 0.5rem 0;
+}
+
+.site {
+    display: flex;
+    padding:1rem 2rem;
+    gap: 0.45rem;
+    margin-right: 2.5rem;
+    align-items: center;
+    text-decoration: none;
+    color: #c1c5d3;
+    font-weight: 700;
+    
+}
+.site img {
+    width: 1.75rem; 
+}
